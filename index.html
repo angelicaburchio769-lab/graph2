@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Microsoft YaHei', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        body { font-family: 'Microsoft YaHei', sans-serif; background: linear-gradient(135deg, #667eea 0%, #f8f9fa 100%); min-height: 100vh; padding: 20px; }
         .container { display: flex; gap: 20px; max-width: 1800px; margin: 0 auto; height: calc(100vh - 40px); }
         .chart-container { flex: 2; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); overflow: hidden; }
         #chart { width: 100%; height: 100%; }
@@ -39,7 +39,7 @@
         <div class="sidebar">
             <div class="legend">
                 <div class="legend-item"><span class="legend-dot" style="background: #667eea;"></span><span>一级节点</span></div>
-                <div class="legend-item"><span class="legend-dot" style="background: #764ba2;"></span><span>二级节点</span></div>
+                <div class="legend-item"><span class="legend-dot" style="background: #a3e635;"></span><span>二级节点</span></div>
                 <div class="legend-item"><span class="legend-dot" style="background: #f97316;"></span><span>三级节点</span></div>
                 <div class="legend-item"><span class="legend-dot" style="background: #0ea5e9;"></span><span>四级节点</span></div>
             </div>
@@ -244,7 +244,7 @@
                 const angle = (idx / subNodes.length) * Math.PI * 2 - Math.PI / 2;
                 const x = level.x + Math.cos(angle) * radius1;
                 const y = level.y + Math.sin(angle) * radius1;
-                nodesData.push({id, name: subNode, level: 2, symbolSize: 50, itemStyle: {color: '#764ba2'}, data: knowledgeData[level.village].subNodes[subNode], x, y});
+                nodesData.push({id, name: subNode, level: 2, symbolSize: 50, itemStyle: {color: '#a3e635'}, data: knowledgeData[level.village].subNodes[subNode], x, y});
                 linksData.push({source: nodeMap[level.village], target: id});
 
                 const children = knowledgeData[level.village].subNodes[subNode].children;
